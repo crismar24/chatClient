@@ -82,7 +82,7 @@ public class Client extends JFrame {
         } while (!message.equals("СЕРВЕР - *"));
     }
 
-    //закрытие потоков и сокетов
+    // закрытие потоков и сокетов
     private void closeConnection() {
         showMessage("\nЗакрываем соединение...");
         readyToType(false);
@@ -95,7 +95,7 @@ public class Client extends JFrame {
         }
     }
 
-    //отправка сообщений на сервер
+    // отправка сообщений на сервер
     private void sendMessage(String message) {
         try {
             outputStream.writeObject("Клиент - " + socket.getInetAddress().getHostAddress() + " - " + message);
@@ -107,7 +107,7 @@ public class Client extends JFrame {
         }
     }
 
-    //обновление окна чата
+    // обновление окна чата
     private void showMessage(final String msg) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
